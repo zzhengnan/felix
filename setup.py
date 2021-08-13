@@ -3,16 +3,16 @@ from setuptools import find_packages, setup
 import felix
 
 
-EXTRA_REQUIRES = {
+EXTRAS_REQUIRE = {
     'build': ['setuptools', 'twine', 'wheel'],
     'qa': ['flake8'],
     'test': ['mypy', 'pytest'],
 }
 
-EXTRA_REQUIRES['dev'] = (
-    EXTRA_REQUIRES['build'] +
-    EXTRA_REQUIRES['qa'] +
-    EXTRA_REQUIRES['test']
+EXTRAS_REQUIRE['dev'] = (
+    EXTRAS_REQUIRE['build'] +
+    EXTRAS_REQUIRE['qa'] +
+    EXTRAS_REQUIRE['test']
 )
 
 
@@ -27,7 +27,7 @@ if __name__ == '__main__':
         long_description_content_type='text/markdown',
         packages=find_packages(),
         python_requires='>=3.7',
-        extra_requires=EXTRA_REQUIRES,
+        extras_require=EXTRAS_REQUIRE,
         classifiers=[
             'Programming Language :: Python :: 3.7',
             'Programming Language :: Python :: 3.8',
